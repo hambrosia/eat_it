@@ -73,7 +73,18 @@ $(function() {
 
     //INITIAL TITLE OF FOOD CARD
     var $foodcard = $("<div class='foodcard col-md-12'></div>");
-    $($foodcard).append("<h1>" + reportData.report.food.name + "</h1>");
+
+    var name = reportData.report.food.name;
+    var lastIndex = name.lastIndexOf(" ");
+    name = name.substring(0, lastIndex);
+    var lastIndex = name.lastIndexOf(" ");
+    name = name.substring(0, lastIndex);
+    name = name.substring(0, name.length -1);
+
+
+
+
+    $($foodcard).append("<h1>" + name + "</h1>");
     $($foodcard).append("<h2>" + "100g contains:</h2>");
 
     //LOOP THROUGH NUTRIENTS AND MAKE BARS

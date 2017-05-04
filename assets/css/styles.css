@@ -1,22 +1,6 @@
-#container{
-  margin: auto;
-  padding-top: 40px;
-  max-width: 960px;
-}
 
-#search-container{
-  margin-bottom: 30px;
-  margin-left: 20px;
-}
-
-.progress{
-  background-color: lightgrey;
-}
-.foodcard{
-  background-color: whitesmoke;
-  padding: 20px;
-  margin-bottom: 30px;
-  box-shadow: 1px 1px 1px darkgrey;
+body{
+  font-family: 'Cabin', sans-serif;
 }
 
 h1{
@@ -29,4 +13,26 @@ h2{
 
 h3{
   font-size: 20px;
+}
+
+
+.progress{
+  background-color: lightgrey;
+}
+.foodcard{
+  background-color: whitesmoke;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 1px 1px 1px darkgrey;
+}
+
+#container{
+  margin: auto;
+  padding-top: 40px;
+  max-width: 960px;
+}
+
+#search-container{
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
