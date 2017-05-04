@@ -1,3 +1,14 @@
 #container{
-  padding: 15%;
+  padding-top: 40px;
+}
+
+#search-container{
+  padding: 30px;
+
+}
+
+.foodcard{
+  background-color: whitesmoke;
+  background-clip: padding-box;
+  border: 10px solid transparent;
 }

@@ -24,7 +24,7 @@ $(function() {
 
     $.ajax({
       type        : 'GET',
-      url         : searchURLmaker(search, 25, apiKey),
+      url         : searchURLmaker(search, "10", apiKey),
       dataType    : 'json',
       success     : function(searchData) {
 
@@ -42,9 +42,6 @@ $(function() {
       }
     });
   }
-
-
-
 
   var reportURLmaker = function(NDBno, apiKey){
     var URL = " https://api.nal.usda.gov/ndb/reports/?ndbno="+ NDBno+"&type=b&format=json&api_key=" + apiKey;
@@ -65,9 +62,6 @@ $(function() {
         //console.log(searchData);
         renderHTML(reportData);
 
-
-
-
     },
     error       : function() {
 
@@ -76,15 +70,16 @@ $(function() {
 }
 
 var renderHTML = function(reportData){
-  $("#results-panel").append("<p>" + "<b>" + reportData.report.food.name + "</b>" + "</p>");
+
+  var $foodcard = $("<div class='foodcard col-xs-12'></div>");
+  $($foodcard).append("<p>" + "<b>" + reportData.report.food.name + "</b>" + "</p>");
   for(i=0; i< reportData.report.food.nutrients.length; i++){
-    $("#results-panel").append("<p>" + reportData.report.food.nutrients[i].name +": " + reportData.report.food.nutrients[i].value + reportData.report.food.nutrients[i].unit + "</p>");
+    $($foodcard).append("<p>" + reportData.report.food.nutrients[i].name +": " + reportData.report.food.nutrients[i].value + reportData.report.food.nutrients[i].unit + "</p>");
+    $("#results-panel").append($foodcard);
 
   }
 
 }
-
-//getReport("45167404");
 
 
 });
