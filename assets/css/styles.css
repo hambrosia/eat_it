@@ -9,6 +9,7 @@
 
 .foodcard{
   background-color: whitesmoke;
+  margin-bottom: 30px;
   background-clip: padding-box;
-  border: 10px solid transparent;
+  border: 15px solid transparent;
 }
