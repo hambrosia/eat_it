@@ -93,7 +93,27 @@ $(function() {
 
         $($foodcard).append("<h3>" + cals + " calories or " + percent + "% of daily recommendation.</h3>");
         var $progress = $("<div class='progress'></div>");
-        $($progress).append("<div class='progress-bar' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
+        $($progress).append("<div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
+        ($foodcard).append($progress);
+      }
+
+
+
+      //IF FAT MAKE A FAT BAR, MAX 112
+      if (reportData.report.food.nutrients[i].name === "Total lipid (fat)"){
+
+        var fat = reportData.report.food.nutrients[i].value;
+
+        if(fat >= 62){
+          protein = 62;
+        }
+        var percent = (fat / 62) *100;
+        percent = Math.floor(percent);
+
+
+        $($foodcard).append("<h3>" + fat + " grams of fat or " + percent + "% of daily recommendation.</h3>");
+        var $progress = $("<div class='progress'></div>");
+        $($progress).append("<div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
         ($foodcard).append($progress);
       }
 
@@ -111,7 +131,7 @@ $(function() {
 
         $($foodcard).append("<h3>" + protein + " grams of protein or " + percent + "% of daily recommendation.</h3>");
         var $progress = $("<div class='progress'></div>");
-        $($progress).append("<div class='progress-bar' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
+        $($progress).append("<div class='progress-bar progress-bar-success' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
         ($foodcard).append($progress);
       }
 

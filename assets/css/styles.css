@@ -2,7 +2,6 @@
   margin: auto;
   padding-top: 40px;
   max-width: 960px;
-
 }
 
 #search-container{
@@ -10,9 +9,24 @@
   margin-left: 20px;
 }
 
+.progress{
+  background-color: lightgrey;
+}
 .foodcard{
   background-color: whitesmoke;
   padding: 20px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 1px darkgrey;
+}
+
+h1{
+  font-size: 24px;
+}
+
+h2{
+  font-size: 22px;
+}
+
+h3{
+  font-size: 20px;
 }
