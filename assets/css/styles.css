@@ -1,15 +1,18 @@
 #container{
+  margin: auto;
   padding-top: 40px;
+  max-width: 960px;
+
 }
 
 #search-container{
-  padding: 30px;
-
+  margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 .foodcard{
   background-color: whitesmoke;
+  padding: 20px;
   margin-bottom: 30px;
-  background-clip: padding-box;
-  border: 15px solid transparent;
+  box-shadow: 1px 1px 1px darkgrey;
 }
