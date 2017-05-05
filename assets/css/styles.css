@@ -1,6 +1,7 @@
 
 body{
   font-family: 'Cabin', sans-serif;
+  background-color: whitesmoke;
 }
 
 h1{
@@ -20,7 +21,7 @@ h3{
   background-color: lightgrey;
 }
 .foodcard{
-  background-color: whitesmoke;
+  background-color: white;
   padding: 20px;
   margin-bottom: 30px;
   box-shadow: 1px 1px 1px darkgrey;
