@@ -15,7 +15,7 @@ $(function() {
   });
 
   var searchURLmaker = function(query, number, apiKey){
-    var URL = "https://api.nal.usda.gov/ndb/search/?format=json&q= " + query + "&sort=n&max=" + number +
+    var URL = "https://api.nal.usda.gov/ndb/search/?format=json&q= " + query + "&sort=r&max=" + number +
     "&offset=0&api_key=" + apiKey;
     return URL;
   }
@@ -74,13 +74,23 @@ $(function() {
     //INITIAL TITLE OF FOOD CARD
     var $foodcard = $("<div class='foodcard col-md-12'></div>");
 
-    var name = reportData.report.food.name;
-    var lastIndex = name.lastIndexOf(" ");
-    name = name.substring(0, lastIndex);
-    var lastIndex = name.lastIndexOf(" ");
-    name = name.substring(0, lastIndex);
-    name = name.substring(0, name.length -1);
 
+    var name = reportData.report.food.name;
+
+    /*
+    if (name.split(" ").length > 3){
+      var lastIndex = name.lastIndexOf(" ");
+      name = name.substring(0, lastIndex);
+      var lastIndex = name.lastIndexOf(" ");
+      name = name.substring(0, lastIndex);
+      name = name.substring(0, name.length -1);
+    } */
+
+
+        if (name.split(" ").length > 3){
+          var lastIndex = name.lastIndexOf(", UPC");
+          name = name.substring(0, lastIndex);
+        }
 
 
 
