@@ -86,13 +86,12 @@ $(function() {
       name = name.substring(0, name.length -1);
     } */
 
-
-        if (name.split(" ").length > 3){
-          var lastIndex = name.lastIndexOf(", UPC");
-          name = name.substring(0, lastIndex);
-        }
-
-
+    if(name.indexOf(", UPC") !== -1){
+      if (name.split(" ").length > 3){
+        var lastIndex = name.lastIndexOf(", UPC");
+        name = name.substring(0, lastIndex);
+      }
+    }
 
     $($foodcard).append("<h1>" + name + "</h1>");
     $($foodcard).append("<h2>" + "100g contains:</h2>");
