@@ -118,8 +118,27 @@ $(function() {
       }
 
 
+      // IF CARBS MAKE A CARBS BAR, MAX 225
+      if (reportData.report.food.nutrients[i].name === "Carbohydrate, by difference"){
 
-      //IF FAT MAKE A FAT BAR, MAX 112
+        var carbs = reportData.report.food.nutrients[i].value;
+
+        if(carbs >= 225){
+          carbs = 225;
+        }
+        var percent = (carbs / 225) * 100;
+        percent = Math.floor(percent);
+
+
+        $($foodcard).append("<h3>" + carbs + " grams of carbs or " + percent + "% of daily recommendation.</h3>");
+        var $progress = $("<div class='progress'></div>");
+        $($progress).append("<div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
+        ($foodcard).append($progress);
+      }
+
+
+
+      //IF FAT MAKE A FAT BAR, MAX 62
       if (reportData.report.food.nutrients[i].name === "Total lipid (fat)"){
 
         var fat = reportData.report.food.nutrients[i].value;
@@ -158,7 +177,7 @@ $(function() {
 
 
 
-      //IF PROTEIN MAKE A PROTEIN BAR, MAX 112
+      //IF SODIUM MAKE A SODIUM BAR, MAX 1500
       if (reportData.report.food.nutrients[i].name === "Sodium, Na"){
 
         var sodium = reportData.report.food.nutrients[i].value;
