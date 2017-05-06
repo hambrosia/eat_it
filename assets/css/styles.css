@@ -35,22 +35,26 @@ h3{
 }
 
 #headline{
-  font-size: 28px;
   background-color: red;
-  width: 230px;
+  width: 250px;
   padding: 5px;
   text-align: center;
   display: table;
   margin-right: auto;
   margin-left: auto;
+  padding: 10px;
 }
 #icon-attr{
+  padding-left: 15%;
+  padding-right: 15%;
   display: table;
   margin-right: auto;
   margin-left: auto;
 }
 #tagline{
   color: white;
+  font-size: 28px;
+
 
 }
 #search-container{
