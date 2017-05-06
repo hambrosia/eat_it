@@ -31,12 +31,29 @@ h3{
   margin: auto;
   padding-top: 40px;
   max-width: 960px;
+  align-content: center;
 }
 
-#search-container{
-  margin-bottom: 30px;
-  margin-left: 20px;
-}
 #headline{
   font-size: 28px;
+  background-color: red;
+  width: 230px;
+  padding: 5px;
+  text-align: center;
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+#icon-attr{
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+#tagline{
+  color: white;
+
+}
+#search-container{
+  margin-bottom: 30px;
+  color: black;
 }
