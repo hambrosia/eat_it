@@ -113,7 +113,7 @@ $(function() {
 
         $($foodcard).append("<h3>" + cals + " calories or " + percent + "% of daily recommendation.</h3>");
         var $progress = $("<div class='progress'></div>");
-        $($progress).append("<div class='progress-bar progress-bar-warning' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
+        $($progress).append("<div class='progress-bar' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
         ($foodcard).append($progress);
       }
 
