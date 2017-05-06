@@ -94,7 +94,7 @@ $(function() {
     }
 
     $($foodcard).append("<h1>" + name + "</h1>");
-    $($foodcard).append("<h2>" + "100g contains:</h2>");
+    $($foodcard).append("<h2>" + "100g or 1/4 lb contains:</h2>");
 
     //LOOP THROUGH NUTRIENTS AND MAKE BARS
     for(i=0; i< reportData.report.food.nutrients.length; i++){
