@@ -155,6 +155,28 @@ $(function() {
         ($foodcard).append($progress);
       }
 
+
+
+
+      //IF PROTEIN MAKE A PROTEIN BAR, MAX 112
+      if (reportData.report.food.nutrients[i].name === "Sodium, Na"){
+
+        var sodium = reportData.report.food.nutrients[i].value;
+
+        if(sodium >= 1500){
+          protein = 1500;
+        }
+        var percent = (sodium / 1500) *100;
+        percent = Math.floor(percent);
+
+
+        $($foodcard).append("<h3>" + sodium + " mg of sodium or " + percent + "% of daily recommendation.</h3>");
+        var $progress = $("<div class='progress'></div>");
+        $($progress).append("<div class='progress-bar progress-bar-danger' role='progressbar' aria-valuenow='" + percent + "'aria-valuemin='0' aria-valuemax='100' style='width:"+ percent +"%''></div>");
+        ($foodcard).append($progress);
+      }
+
+
       /* $($foodcard).append("<p>" + reportData.report.food.nutrients[i].name +": " + reportData.report.food.nutrients[i].value + reportData.report.food.nutrients[i].unit + "</p>"); */
 
     }
